@@ -1,8 +1,17 @@
 import axios from "axios";
 const local = 'http://localhost:5000'
-const production = 'domain name here'
+const production = 'http://localhost:6000'
+
+let api_url = ''
+let mode = 'prod'
+
+if (mode === 'prod') {
+    api_url = production
+} else {
+    api_url = local
+}
 const api = axios.create({
-    baseURL : `${local}/api`
+    baseURL : `${api_url}/api`
 })
 
 export default api
