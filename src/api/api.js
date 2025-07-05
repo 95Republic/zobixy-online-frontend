@@ -1,6 +1,6 @@
 import axios from "axios";
 const local = 'http://localhost:5000'
-const production = 'http://localhost:6000'
+const production = 'https://zobixy-online-backend-api.onrender.com'
 
 let api_url = ''
 let mode = 'prod'
